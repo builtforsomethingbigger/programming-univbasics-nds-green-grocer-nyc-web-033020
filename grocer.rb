@@ -84,7 +84,7 @@ def apply_clearance(cart)
     checkout.push(current_item)
     index += 1
   end
-  ready_for_checkout
+  checkout
 end
 
 def checkout(cart, coupons)
