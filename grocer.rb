@@ -1,3 +1,15 @@
+def increment_count_of_item (cart, item_name)
+  cart_index = 0
+  while cart_index < cart.size do
+    current_item = cart[cart_index]
+    if ( current_item[:item] == item_name )
+      current_item[:count] += 1
+    end
+    cart_index += 1
+  end
+  cart
+end
+
 def find_item_by_name_in_collection(name, collection)
   # Implement me first!
   #
@@ -24,7 +36,7 @@ def consolidate_cart(cart)
 
   while index < cart.length do
     current_item = cart[index]
-    if (find_item_by_name_in_collection(current_item[:item], updated_cart ) == nil)
+    if (find_item_by_name_in_collection(current_item[:item], updated_cart) == nil)
       current_item[:count] = 1
       updated_cart.push(current_item)
     else
