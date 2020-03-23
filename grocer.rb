@@ -74,14 +74,14 @@ def apply_clearance(cart)
   #
   # REMEMBER: This method **should** update cart
   index = 0
-  ready_for_checkout = Array.new
+  checkout = Array.new
 
   while index < cart.length do
     current_item = cart[index]
     if (current_item[:clearance])
       current_item[:price] = current_item[:price] - (current_item[:price] * 0.20)
     end
-    ready_for_checkout.push(current_item)
+    checkout.push(current_item)
     index += 1
   end
   ready_for_checkout
